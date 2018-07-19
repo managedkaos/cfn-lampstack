@@ -43,7 +43,7 @@ def main():
             AllowedPattern="[-_a-zA-Z0-9]*",
         )
     )
-    
+
     db_user_param = template.add_parameter(
         Parameter(
             'DBUser',
@@ -141,7 +141,7 @@ def main():
 			            'apt-get install -y python-pip\n',
 			            'pip install https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-latest.tar.gz\n',
                         'apt-get install -y apache2\n',
-                        '# Signal Cloudformation when set up is complete\n'
+                        '# Signal Cloudformation when set up is complete\n',
                         '/usr/local/bin/cfn-signal -e $? --resource=Instance --region=', Ref('AWS::Region'), ' --stack=', Ref('AWS::StackName'), '\n',
                     ]
                 )
