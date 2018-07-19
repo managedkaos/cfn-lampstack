@@ -32,7 +32,7 @@ stack: $(STACKNAME).yml
 
 describe-stack:
 	 $(AWS) --profile=$(PROFILE) cloudformation describe-stacks \
-		 --stack-name $(STACKNAME) | $(JQ) .Stacks[0].Outputs
+		 --stack-name $(STACKNAME) | $(JQ) .Stacks[0].Outputs,.Stacks[0].Parameters
 
 delete-stack:
 	$(AWS) --profile=$(PROFILE) cloudformation delete-stack \
