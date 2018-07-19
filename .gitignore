@@ -1,3 +1,6 @@
+# Visual Studio Code
+.vscode/
+
 # Cloudformation files
 *.cfn
 *.yml
