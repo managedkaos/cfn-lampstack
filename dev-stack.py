@@ -130,7 +130,7 @@ def main():
                     '',
                     [
                         '#!/bin/bash -x\n',
-                        'exec > /tmp/user-data.log 2>&1\n'
+                        'exec > /tmp/user-data.log 2>&1\n',
                         'unset UCF_FORCE_CONFFOLD\n',
                         'export UCF_FORCE_CONFFNEW=YES\n',
                         'ucf --purge /boot/grub/menu.lst\n',
