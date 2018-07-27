@@ -147,6 +147,14 @@ def main():
         )
     )
 
+    ip_association = template.add_resource(
+        ec2.EIPAssociation(
+            'IPAssociation',
+            InstanceId=Ref(ec2_instance),
+            AllocationId='eipalloc-aa755d96'
+        )
+    )
+
     db_instance = template.add_resource(
         DBInstance(
             'Database',
